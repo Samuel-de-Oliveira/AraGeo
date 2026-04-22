@@ -1,16 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+:root {
+  --UI-black: #131313;
+}
+
 * {
 	margin:  0;
 	padding: 0;
-	font-family: "Arial", "sans-serif";
+	font-family: "Atkinson Hyperlegible", "Arial", "sans-serif";
 	color: black;
+}
+
+header {
+  padding: 30px;
+  padding-bottom: 10px;
+	background: whitesmoke;
+  font-size: 20pt;
+}
+
+main {
+  padding: 35px;
+  padding-top: 10px;
+  font-size: 15pt;
 	background: whitesmoke;
 }
 
-body {
-  margin: 12px;
-  font-size: 14pt;
+footer {
+  padding: 20px;
+  color: white;
+  background: var(--UI-black);
 }
 
+footer > sub {
+  color: white;
+}
 
 @media (max-width: 600px) {
   font-size: 12pt;
