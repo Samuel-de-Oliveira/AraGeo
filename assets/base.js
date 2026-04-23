@@ -19,11 +19,7 @@ document.getElementById("version").innerHTML = `
 const params = new URLSearchParams(window.location.search);
 const solidObject = Object.fromEntries(params);
 
-// HACK: Testando funções
-console.log(solidObject);
-console.log(solids.renderCube(solidObject));
-console.log(solids.renderSphere(solidObject));
-console.log(solids.renderCilinder(solidObject));
+console.log(solidObject); // Verify polyhedron Parameters
 
 // Title set
 if (solidObject.solid) {
@@ -33,18 +29,16 @@ if (solidObject.solid) {
 }
 
 // Polyhedron Information
-if (solidObject) {
-  // TODO: Criar uma base de dados com JSON
-  if (solidObject.solid == "Cubo") {
-    document.getElementById("solid-info").innerHTML = solids.renderCube(solidObject);
-  } else {
-    document.getElementById("solid-info").innerHTML = `
-      <b>Este sólido não está na base de dados!!!</b>
-    `
-  }
+if (solidObject.solid) {
+  // Show polyhedron info
+  // TODO: Create a Error threat system for this to avoid critical errors
+  document.getElementById("solid-info").innerHTML = solids[
+    tools.SYSTEM_DATA.solids[solidObject.solid]
+  ](solidObject);
 } else {
-  // TODO: Use a createElement() system
+  // In case theres is no Seach Params
   document.getElementById("solid-info").innerHTML = `
-    <b>Estamos sem informações suficientes sobre o sólido!!!</b>
+    <b>Estamos sem informações suficientes sobre o sólido!!!</b><br>
+    <b>ERROR: O sistema de Seach Parameters está sem parametros!!!</b>
   `;
 }

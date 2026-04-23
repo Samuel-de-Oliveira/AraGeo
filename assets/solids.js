@@ -17,14 +17,30 @@ export function renderCube(Solid) {
     <li><b>Formula do seu Área:</b> 6 * l²</li>
     <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
     <li><b>Área real do sólido:</b> ${realArea} <i>cm²</i></li>
+    <li><b>É um sólido de Platão.</b></li>
   </ul>
   `;
 }
 
 // TODO: Cilinder
-export function renderCilinder(Solid) {
-  return `Sólido: ${Solid.solid}`;
+export function renderCylinder(Solid) {
+  return `
+  <ul>
+    <li><b>Raio da Base:</b> ${Solid.radius} <i>cm</i></li>
+    <li><b>Altura do Cilindro:</b> ${Solid.height} <i>cm</i></li>
+  </ul>
+  `;
 } 
+
+// TODO: Tetrahedron
+export function renderRegularTetrahedron(Solid) {
+  return `Sólido: ${Solid.solid}`;
+}
+
+// TODO: Dodecahedron
+export function renderRegularDodecahedron(Solid) {
+  return `Sólido: ${Solid.solid}`;
+}
 
 // TODO: Sphere
 export function renderSphere(Solid) {
