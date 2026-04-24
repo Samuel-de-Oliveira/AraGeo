@@ -39,7 +39,7 @@ if (solidObject.solid) {
     document.getElementById("solid-info").innerHTML = `
       <b>Estamos sem informações suficientes sobre o sólido!!!</b><br>
       <b>ERROR: ${Err.name}!!!</b>
-    `
+    `;
   }
 } else {
   // In case theres is no Seach Params

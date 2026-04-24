@@ -11,13 +11,21 @@ export function renderCube(Solid) {
   const realArea = (Number(Solid.aresta) ** 2) * 6;
 
   return `
+  <p id="definition">
+    <b>Definição: </b> Poliédro de 6 faces quadradas, onde
+    cada um dos seus vertices tem o mesmo tamanho e cada face
+    a mesma área.
+  </p>
+
   <ul>
     <li><b>Tamanho do lado do cubo:</b> ${Solid.aresta} <i>cm</i></li>
-    <li><b>Formula do seu Volume:</b> l³ (Volume real)</li>
-    <li><b>Formula do seu Área:</b> 6 * l²</li>
+    <li><b>Formula do seu Volume:</b> l³</li>
+    <li><b>Formula do seu Área:</b> 6l²</li>
     <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
     <li><b>Área real do sólido:</b> ${realArea} <i>cm²</i></li>
-    <li><b>Quantidade de Faces:</b> 6</li>
+    <li><b>Quantidade de faces:</b> 6</li>
+    <li><b>Quantidade de arestas:</b> 12</li>
+    <li><b>Quantidade de vértices:</b> 8</li>
     <li><b>É um sólido de Platão.</b></li>
   </ul>
   `;
@@ -30,14 +38,21 @@ export function renderCylinder(Solid) {
   const realArea = 2 * baseArea + sideArea;
 
   return `
+  <p id="definition">
+    <b>Definição: </b> Poliédro de tipo prisma que possui
+    uma base que é circular.
+  </p>
+
   <ul>
     <li><b>Raio da Base:</b> ${Solid.radius} <i>cm</i></li>
     <li><b>Altura do Cilindro:</b> ${Solid.height} <i>cm</i></li>
-    <li><b>Formula do Volume:</b> π r²h</li>
-    <li><b>Formula da Área:</b> 2 π r² + 2 π rh</li>
+    <li><b>Formula do Volume:</b> πr²h</li>
+    <li><b>Formula da Área:</b> 2πr² + 2πrh</li>
     <li><b>Volume real do sólido:</b> ${realVolume.toFixed(3)} <i>cm³</i></li>
     <li><b>Área real do Sólido:</b> ${realArea.toFixed(3)} <i>cm²</i></li>
     <li><b>Quantidade de faces:</b> 3</li>
+    <li><b>Quantidade de arestas:</b> 3</li>
+    <li><b>Não possui vérices</b></li>
   </ul>
   `;
 } 
@@ -51,14 +66,17 @@ export function renderRegularDodecahedron(Solid) {
   //TODO: buscar mais informações importentes
   return `
   <ul>
-    <li><b>Tamanho do lado do dodecaedro:</b> ${Solid.side}</li>
+    <li><b>Tamanho do lado do dodecaedro:</b> ${Solid.side} <i>cm</i></li>
     <li><b>Quantidade de faces:</b> 12</li>
     <li><b>É um sólido de platão.</b></li>
+    <li></li>
   <ul>
   `;
 }
 
 // TODO: Sphere
 export function renderSphere(Solid) {
+  const realVolume = 4/3 * Math.pi * Number(Solid.radius);
+
   return `Sólido: ${Solid.solid}`;
 }

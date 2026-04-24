@@ -25,6 +25,11 @@ main {
 	background: whitesmoke;
 }
 
+#definition {
+  font-size: 18pt;
+  padding: 10px
+}
+
 footer {
   padding: 20px;
   padding-top: 25px;
