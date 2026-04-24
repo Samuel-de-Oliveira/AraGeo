@@ -31,10 +31,16 @@ if (solidObject.solid) {
 // Polyhedron Information
 if (solidObject.solid) {
   // Show polyhedron info
-  // TODO: Create a Error threat system for this to avoid critical errors
-  document.getElementById("solid-info").innerHTML = solids[
-    tools.SYSTEM_DATA.solids[solidObject.solid]
-  ](solidObject);
+  try {
+    document.getElementById("solid-info").innerHTML = solids[
+      tools.SYSTEM_DATA.solids[solidObject.solid]
+    ](solidObject);
+  } catch(Err) {
+    document.getElementById("solid-info").innerHTML = `
+      <b>Estamos sem informações suficientes sobre o sólido!!!</b><br>
+      <b>ERROR: ${Err.name}!!!</b>
+    `
+  }
 } else {
   // In case theres is no Seach Params
   document.getElementById("solid-info").innerHTML = `
