@@ -5,10 +5,19 @@
  *
  */
 
-// TODO: Create a english version soon 
-
 import * as solids from "./solids.js";
 import * as tools from "./tools.js";
+
+//// Language system ////
+// TODO: FIx this language system
+const lang = navigator.language;
+console.log(lang);
+if (["en", "en-us"].includes(lang.toLowerCase())) {
+  console.log("Yes!");
+} else {
+  console.log("In english, please!");
+}
+////////////////////////
 
 // Version formater
 document.getElementById("version").innerHTML = `
@@ -23,9 +32,9 @@ console.log(solidObject); // Verify polyhedron Parameters
 
 // Title set
 if (solidObject.solid) {
-  document.getElementById("solid-name").innerHTML = solidObject.solid;
+  document.getElementById("solid-name").innerHTML = `Olá, meu nome é ${solidObject.solid}`;
 } else {
-  document.getElementById("solid-name").innerHTML = "Sem nome!";
+  document.getElementById("solid-name").innerHTML = "ERROR: Você esqueceu meu nome!!!";
 }
 
 // Polyhedron Information

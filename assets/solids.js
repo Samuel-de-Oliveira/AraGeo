@@ -6,9 +6,11 @@
  *
  */
 
+// TODO: Add MathJax to apply LaTeX to the website
+
 export function renderCube(Solid) {
-  const realVolume = Number(Solid.aresta) ** 3;
-  const realArea = (Number(Solid.aresta) ** 2) * 6;
+  const realVolume = Number(Solid.side) ** 3;
+  const realArea = (Number(Solid.side) ** 2) * 6;
 
   return `
   <p id="definition">
@@ -18,7 +20,7 @@ export function renderCube(Solid) {
   </p>
 
   <ul>
-    <li><b>Tamanho do lado do cubo:</b> ${Solid.aresta} <i>cm</i></li>
+    <li><b>Tamanho do lado do cubo:</b> ${Solid.side} <i>cm</i></li>
     <li><b>Formula do seu Volume:</b> l³</li>
     <li><b>Formula do seu Área:</b> 6l²</li>
     <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
@@ -63,20 +65,42 @@ export function renderRegularTetrahedron(Solid) {
 }
 
 export function renderRegularDodecahedron(Solid) {
-  //TODO: buscar mais informações importentes
   return `
+  <p id="definition">
+    <b>Definição:</b> Poliédro de 12 faces onde cada
+    face é um pentagono regular.
+  </p>
+
   <ul>
     <li><b>Tamanho do lado do dodecaedro:</b> ${Solid.side} <i>cm</i></li>
     <li><b>Quantidade de faces:</b> 12</li>
+    <li><b>Quantidade de arestas:</b> 30</li>
+    <li><b>Quantidade de vertices:</b> 20</li>
     <li><b>É um sólido de platão.</b></li>
     <li></li>
   <ul>
   `;
 }
 
-// TODO: Sphere
 export function renderSphere(Solid) {
-  const realVolume = 4/3 * Math.pi * Number(Solid.radius);
+  const realVolume = 4/3 * Math.pi * (Number(Solid.radius) ** 3);
+  const realArea = 4 * Math.pi * (Number(Solid.radius) ** 2);
 
-  return `Sólido: ${Solid.solid}`;
+  return `
+   <ul>
+     <p id="definition">
+       <b>Definição:</b> É um poliedroi liso tal que existe um conjunto
+       de todos os pontos do espaço que estão fixos pela mesma distância
+       de um raio.
+     </p>
+
+     <li><b>Raio real da esfera:</b> ${Solid.radius} <i>cm</i></li>
+     <li><b>Formula do Volume:</b> 4/3 * πr³</li>
+     <li><b>Formula do Área:</b> 4πr²</li>
+     <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
+     <li><b>Área real do sólido:</b> ${realArea} <i>cm²</i></li>
+     <li><b>Não possui face, aresta e nem vertice.</b></li>
+     <li><b>Mas se considera que tenha uma surperficie curva.</b></li>
+   </ul>
+  `;
 }
