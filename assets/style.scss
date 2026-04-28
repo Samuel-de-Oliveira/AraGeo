@@ -2,7 +2,7 @@
 
 :root {
   --UI-black: #131313;
-  --UI-White: #EAEAEA;
+  --UI-White: #DADADA;
 }
 
 * {
@@ -39,6 +39,15 @@ footer {
   sub {
     color: white;
   }
+  a {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  } a:hover {
+    color: var(--UI-white);
+    text-decoration: underline;
+    transition-duration: 0.2s;
+  }
 
   padding: 20px;
   padding-top: 25px;
@@ -47,4 +56,8 @@ footer {
 }
 
 // Media Queries
-// Soon
+@media (max-width: 600px) {
+  main {
+    font-size: 14pt;
+  }
+}

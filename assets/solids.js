@@ -6,7 +6,8 @@
  *
  */
 
-// TODO: Add MathJax to apply LaTeX to the website
+// Translation system
+import * as translation from "./translations.js";
 
 export function renderCube(Solid) {
   const realVolume = Number(Solid.side) ** 3;
@@ -21,8 +22,8 @@ export function renderCube(Solid) {
 
   <ul>
     <li><b>Tamanho do lado do cubo:</b> ${Solid.side} <i>cm</i></li>
-    <li><b>Formula do seu Volume:</b> l³</li>
-    <li><b>Formula do seu Área:</b> 6l²</li>
+    <li><b>Formula do seu Volume:</b> \\( l^{3} \\)</li>
+    <li><b>Formula do seu Área:</b> \\( 6l^{2} \\)</li>
     <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
     <li><b>Área real do sólido:</b> ${realArea} <i>cm²</i></li>
     <li><b>Quantidade de faces:</b> 6</li>
@@ -48,8 +49,8 @@ export function renderCylinder(Solid) {
   <ul>
     <li><b>Raio da Base:</b> ${Solid.radius} <i>cm</i></li>
     <li><b>Altura do Cilindro:</b> ${Solid.height} <i>cm</i></li>
-    <li><b>Formula do Volume:</b> πr²h</li>
-    <li><b>Formula da Área:</b> 2πr² + 2πrh</li>
+    <li><b>Formula do Volume:</b> \\( \\pi r^{2} h \\)</li>
+    <li><b>Formula da Área:</b> \\( 2 \\pi r^{2} + 2 \\pi r h \\)</li>
     <li><b>Volume real do sólido:</b> ${realVolume.toFixed(3)} <i>cm³</i></li>
     <li><b>Área real do Sólido:</b> ${realArea.toFixed(3)} <i>cm²</i></li>
     <li><b>Quantidade de faces:</b> 3</li>
@@ -61,7 +62,13 @@ export function renderCylinder(Solid) {
 
 // TODO: Tetrahedron
 export function renderRegularTetrahedron(Solid) {
-  return `Sólido: ${Solid.solid}`;
+  const realVolume = Solid.side * 2;
+
+  return `
+  <ul>
+    <li><b>É um sólido de platão</b></li>
+  </ul>
+  `;
 }
 
 export function renderRegularDodecahedron(Solid) {
@@ -95,8 +102,8 @@ export function renderSphere(Solid) {
      </p>
 
      <li><b>Raio real da esfera:</b> ${Solid.radius} <i>cm</i></li>
-     <li><b>Formula do Volume:</b> 4/3 * πr³</li>
-     <li><b>Formula do Área:</b> 4πr²</li>
+     <li><b>Formula do Volume:</b> \\( 4/3 \\cdot \\pi r^{3} \\)</li>
+     <li><b>Formula do Área:</b> \\( 4 \\pi r^{2} \\)</li>
      <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
      <li><b>Área real do sólido:</b> ${realArea} <i>cm²</i></li>
      <li><b>Não possui face, aresta e nem vertice.</b></li>

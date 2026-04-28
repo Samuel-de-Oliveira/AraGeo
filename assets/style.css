@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap");
 :root {
   --UI-black: #131313;
-  --UI-White: #EAEAEA;
+  --UI-White: #DADADA;
 }
 
 * {
@@ -37,11 +37,27 @@ main {
 footer sub {
   color: white;
 }
+footer a {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+footer a:hover {
+  color: var(--UI-white);
+  text-decoration: underline;
+  transition-duration: 0.2s;
+}
 footer {
   padding: 20px;
   padding-top: 25px;
   color: white;
   background: var(--UI-black);
+}
+
+@media (max-width: 600px) {
+  main {
+    font-size: 14pt;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,18 +10,26 @@ import * as tools from "./tools.js";
 import * as translation from "./translations.js";
 
 //// Language system ////
-// TODO: FIx this language system
 const lang = navigator.language;
+var solid_translate = {};
 var translate = {};
 
 if (["en", "en-us"].includes(lang.toLowerCase())) {
-  translate = translation["EN"]; // English
+  // English
+  solid_translate = tranlation["SOLID_EN"];
+  translate = translation["EN"];
 } else if (["fr", "fr-fr"].includes(lang.toLowerCase())) {
-  translate = translation["FR"]; // Français
+  // Français
+  solid_translate = translation["FR"];
+  translate = translation["FR"];
 } else if (["pt", "pt-br", "pt-pt"].includes(lang.toLowerCase())) {
-  translate = translation["PT_BR"]; // Português
+  // Português
+  solid_translate = translation["PT_BR"]
+  translate = translation["PT_BR"];
 } else {
-  translate = translation["EN"]; // In case of n translations avalible
+  // In case of no translations avalible
+  solid_translate = tranlation["SOLID_EN"];
+  translate = translation["EN"];
 }
 ////////////////////////
 
