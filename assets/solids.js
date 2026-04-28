@@ -6,8 +6,33 @@
  *
  */
 
-// Translation system
+//// Language system ////
 import * as translation from "./translations.js";
+
+const lang = navigator.language;
+var solid_translate = {};
+var translate = {};
+
+if (["en", "en-us"].includes(lang.toLowerCase())) {
+  // English
+  solid_translate = translation["SOLIDS_EN"];
+  translate = translation["EN"];
+} else if (["fr", "fr-fr"].includes(lang.toLowerCase())) {
+  // Français
+  solid_translate = translation["SOLIDS_FR"];
+  translate = translation["FR"];
+} else if (["pt", "pt-br", "pt-pt"].includes(lang.toLowerCase())) {
+  // Português
+  solid_translate = translation["SOLIDS_PT_BR"];
+  translate = translation["PT_BR"];
+} else {
+  // In case of no translations avalible
+  solid_translate = tranlation["SOLIDS_EN"];
+  translate = translation["EN"];
+}
+////////////////////////
+
+
 
 export function renderCube(Solid) {
   const realVolume = Number(Solid.side) ** 3;
@@ -21,15 +46,15 @@ export function renderCube(Solid) {
   </p>
 
   <ul>
-    <li><b>Tamanho do lado do cubo:</b> ${Solid.side} <i>cm</i></li>
-    <li><b>Formula do seu Volume:</b> \\( l^{3} \\)</li>
-    <li><b>Formula do seu Área:</b> \\( 6l^{2} \\)</li>
-    <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
-    <li><b>Área real do sólido:</b> ${realArea} <i>cm²</i></li>
-    <li><b>Quantidade de faces:</b> 6</li>
-    <li><b>Quantidade de arestas:</b> 12</li>
-    <li><b>Quantidade de vértices:</b> 8</li>
-    <li><b>É um sólido de Platão.</b></li>
+    <li><b>${translate["side_value"]}</b> ${Solid.side} <i>cm</i></li>
+    <li><b>${translate["volume_formula"]}</b> \\( l^{3} \\)</li>
+    <li><b>${translate["area_formula"]}</b> \\( 6l^{2} \\)</li>
+    <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³</i></li>
+    <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i></li>
+    <li><b>${translate["faces"]}</b> 6</li>
+    <li><b>${translate["edges"]}</b> 12</li>
+    <li><b>${translate["vertex"]}</b> 8</li>
+    <li><b>${translate["platon"]}</b></li>
   </ul>
   `;
 }

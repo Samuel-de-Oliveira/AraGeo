@@ -16,22 +16,31 @@ var translate = {};
 
 if (["en", "en-us"].includes(lang.toLowerCase())) {
   // English
-  solid_translate = tranlation["SOLID_EN"];
+  solid_translate = translation["SOLIDS_EN"];
   translate = translation["EN"];
 } else if (["fr", "fr-fr"].includes(lang.toLowerCase())) {
   // Français
-  solid_translate = translation["FR"];
+  solid_translate = translation["SOLIDS_FR"];
   translate = translation["FR"];
 } else if (["pt", "pt-br", "pt-pt"].includes(lang.toLowerCase())) {
   // Português
-  solid_translate = translation["PT_BR"]
+  solid_translate = translation["SOLIDS_PT_BR"];
   translate = translation["PT_BR"];
 } else {
   // In case of no translations avalible
-  solid_translate = tranlation["SOLID_EN"];
+  solid_translate = tranlation["SOLIDS_EN"];
   translate = translation["EN"];
 }
 ////////////////////////
+
+
+// Voice Speech test //
+const text_test = "Ceci n'est pas un test";
+
+const utterance = new SpeechSynthesisUtterance(text_test);
+utterance.lang = "fr-FR";
+speechSynthesis.speak(utterance);
+
 
 // Version formater
 document.getElementById("version").innerHTML = `
@@ -48,7 +57,7 @@ console.log(solidObject); // Verify polyhedron Parameters
 // Title set
 if (solidObject.solid) {
   document.getElementById("solid-name").innerHTML = `
-    ${translate["solid_name"]} ${solidObject.solid}
+    ${translate["solid_name"]} ${solid_translate[solidObject.solid]}
   `;
 } else {
   document.getElementById("solid-name").innerHTML = "ERROR: Você esqueceu meu nome!!!";

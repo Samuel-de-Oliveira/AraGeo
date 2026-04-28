@@ -28,7 +28,7 @@ export const FR = {
   solid_name: "Salut, je m'appele", 
   credit: `Creé par: <a href="${tools.MAIN_PAGE}">Samuel-de-Oliveirai</a>`,
   version: "Version de la base:",
-  side_value: "The side of this solid has:",
+  side_value: "Le côté de ce solide vaut:",
   volume_formula: "Formule du volume:",
   area_formula: "Formule de l'aire:",
   volume: "Le volume réel du solide:",
