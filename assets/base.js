@@ -33,13 +33,40 @@ if (["en", "en-us"].includes(lang.toLowerCase())) {
 }
 ////////////////////////
 
+//// MathJax Acessibility Config ////
+window.MathJax = {
+  options: {
+    enableSpeech: true,
+    renderActions: {
+      assistiveMml: []
+    }
+  }
+};
+/////////////////////////////////////
 
-// Voice Speech test //
-const text_test = "Ceci n'est pas un test";
 
+//// Voice Speech test ////
+// TODO: Change the speech text to VoiPi
+const text_test = "Ceci n'est pas un Speech Synthesis!";
+const onenter = new SpeechSynthesisUtterance(
+  "activer le lecteur"
+);
 const utterance = new SpeechSynthesisUtterance(text_test);
+console.log(utterance.langs);
 utterance.lang = "fr-FR";
-speechSynthesis.speak(utterance);
+onenter.lag = "fr-FR";
+
+// TODO: Activation button
+document.getElementById("read").innerHTML = "Active auto reader";
+document.getElementById("read").onclick = () => {
+  console.log("Works!");
+  speechSynthesis.speak(utterance);
+};
+document.getElementById("read").onmouseenter = () => {
+  console.log("Something goes read here...");
+  speechSynthesis.speak(onenter);
+};
+////////////////////////////
 
 
 // Version formater

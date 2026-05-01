@@ -21,6 +21,7 @@ export const EN = {
   edges: "Number of edges:",
   vertex: "Number of vertices:",
   platon: "It's a Platon's solid.",
+  definition: "<b>Defition:</b>",
 };
 
 // Français
@@ -37,6 +38,7 @@ export const FR = {
   edges: "Nombre de arêtes:",
   vertex: "Nombre de sommet:",
   platon: "C'est un solide de Platon.",
+  definition: "<b>Defition:</b>",
 };
 
 // Português Brasil
@@ -53,6 +55,7 @@ export const PT_BR = {
   vertex: "Número de vertices:",
   side_value: "O lado deste sólido mede:",
   platon: "É um sólido de Platão",
+  definition: "<b>Definição:</b>",
 };
 
 // Solids English

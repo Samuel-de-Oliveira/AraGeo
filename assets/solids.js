@@ -40,7 +40,7 @@ export function renderCube(Solid) {
 
   return `
   <p id="definition">
-    <b>Definição: </b> Poliédro de 6 faces quadradas, onde
+    <b>${translate["definition"]}</b> Poliédro de 6 faces quadradas, onde
     cada um dos seus vertices tem o mesmo tamanho e cada face
     a mesma área.
   </p>
@@ -67,31 +67,32 @@ export function renderCylinder(Solid) {
 
   return `
   <p id="definition">
-    <b>Definição: </b> Poliédro de tipo prisma que possui
+    <b>${translate["definition"]}/b> Poliédro de tipo prisma que possui
     uma base que é circular.
   </p>
 
   <ul>
     <li><b>Raio da Base:</b> ${Solid.radius} <i>cm</i></li>
     <li><b>Altura do Cilindro:</b> ${Solid.height} <i>cm</i></li>
-    <li><b>Formula do Volume:</b> \\( \\pi r^{2} h \\)</li>
-    <li><b>Formula da Área:</b> \\( 2 \\pi r^{2} + 2 \\pi r h \\)</li>
-    <li><b>Volume real do sólido:</b> ${realVolume.toFixed(3)} <i>cm³</i></li>
-    <li><b>Área real do Sólido:</b> ${realArea.toFixed(3)} <i>cm²</i></li>
-    <li><b>Quantidade de faces:</b> 3</li>
-    <li><b>Quantidade de arestas:</b> 3</li>
-    <li><b>Não possui vérices</b></li>
+    <li><b>${translate["formula_volume"]}</b> \\( \\pi r^{2} h \\)</li>
+    <li><b>${translate["area_formula"]}</b> \\( 2 \\pi r^{2} + 2 \\pi r h \\)</li>
+    <li><b>${translate["volume"]}</b> ${realVolume.toFixed(3)} <i>cm³</i></li>
+    <li><b>${translate["area"]}</b> ${realArea.toFixed(3)} <i>cm²</i></li>
+    <li><b>${translate["faces"]}</b> 3</li>
+    <li><b>${translate["edges"]}</b> 3</li>
+    <li><b>${translate["vertex"]}</b></li>
   </ul>
   `;
 } 
 
 // TODO: Tetrahedron
 export function renderRegularTetrahedron(Solid) {
-  const realVolume = Solid.side * 2;
+  const realVolume = Number(Solid.side) * 2;
 
   return `
   <ul>
-    <li><b>É um sólido de platão</b></li>
+    <li><b>${translate["side_value"]}</b> ${Solid.side}</li>
+    <li><b>${translate["platon"]}</b></li>
   </ul>
   `;
 }
@@ -99,17 +100,16 @@ export function renderRegularTetrahedron(Solid) {
 export function renderRegularDodecahedron(Solid) {
   return `
   <p id="definition">
-    <b>Definição:</b> Poliédro de 12 faces onde cada
+    <b>${translate["definition"]}</b> Poliédro de 12 faces onde cada
     face é um pentagono regular.
   </p>
 
   <ul>
-    <li><b>Tamanho do lado do dodecaedro:</b> ${Solid.side} <i>cm</i></li>
-    <li><b>Quantidade de faces:</b> 12</li>
-    <li><b>Quantidade de arestas:</b> 30</li>
-    <li><b>Quantidade de vertices:</b> 20</li>
-    <li><b>É um sólido de platão.</b></li>
-    <li></li>
+    <li><b>${translate["side_value"]}</b> ${Solid.side} <i>cm</i></li>
+    <li><b>${translate["faces"]}</b> 12</li>
+    <li><b>${translate["edges"]}</b> 30</li>
+    <li><b>${translate["vertex"]}</b> 20</li>
+    <li><b>${translate["platon"]}</b></li>
   <ul>
   `;
 }
@@ -121,16 +121,16 @@ export function renderSphere(Solid) {
   return `
    <ul>
      <p id="definition">
-       <b>Definição:</b> É um poliedroi liso tal que existe um conjunto
+       <b>${translate["definition"]}</b> É um poliedro liso, tal que existe um conjunto
        de todos os pontos do espaço que estão fixos pela mesma distância
-       de um raio.
+       de um certo raio.
      </p>
 
      <li><b>Raio real da esfera:</b> ${Solid.radius} <i>cm</i></li>
-     <li><b>Formula do Volume:</b> \\( 4/3 \\cdot \\pi r^{3} \\)</li>
-     <li><b>Formula do Área:</b> \\( 4 \\pi r^{2} \\)</li>
-     <li><b>Volume real do sólido:</b> ${realVolume} <i>cm³</i></li>
-     <li><b>Área real do sólido:</b> ${realArea} <i>cm²</i></li>
+     <li><b>${translate["volume_formula"]}</b> \\( 4/3 \\cdot \\pi r^{3} \\)</li>
+     <li><b>${translate["area_formula"]}</b> \\( 4 \\pi r^{2} \\)</li>
+     <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³</i></li>
+     <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i></li>
      <li><b>Não possui face, aresta e nem vertice.</b></li>
      <li><b>Mas se considera que tenha uma surperficie curva.</b></li>
    </ul>

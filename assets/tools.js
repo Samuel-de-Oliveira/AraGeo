@@ -13,3 +13,5 @@ export const SYSTEM_DATA = {
     Sphere: "renderSphere",
   },
 }; 
+
+// TODO: Move translate system to here

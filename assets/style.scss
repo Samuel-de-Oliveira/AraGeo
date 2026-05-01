@@ -3,8 +3,9 @@
 :root {
   --UI-black: #131313;
   --UI-White: #DADADA;
+  --Transition:  0.2s;
 }
-
+ 
 * {
 	margin:  0;
 	padding: 0;
@@ -13,6 +14,24 @@
 }
 
 header {
+  #read {
+    padding: 20px;
+    font-size: 18pt;
+    border-radius: 10px;
+
+    color: var(--UI-White);
+    background: var(--UI-black);
+    transition-duration: var(--Transition);
+  } #read:hover {
+    color: var(--UI-black);
+    background: var(--UI-White);
+    transition-duration: var(--Transition);
+  } #read:active {
+    color: var(--UI-White);
+    background: var(--UI-black);
+    transition-duration: var(--Transition);
+  }
+
   padding-top: 30px;
   padding-left: 10vw;
   padding-right: 10vw;
@@ -42,11 +61,11 @@ footer {
   a {
     color: white;
     text-decoration: none;
-    transition-duration: 0.2s;
+    transition-duration: var(--Transition);
   } a:hover {
     color: var(--UI-white);
     text-decoration: underline;
-    transition-duration: 0.2s;
+    transition-duration: var(--Transition);
   }
 
   padding: 20px;
@@ -55,9 +74,15 @@ footer {
   background: var(--UI-black);
 }
 
-// Media Queries
+// Media Queries //
 @media (max-width: 600px) {
   main {
     font-size: 14pt;
+    padding: 22px;
+    padding-top: 8px;
+  }
+
+  #definition {
+    font-size: 15px;
   }
 }
