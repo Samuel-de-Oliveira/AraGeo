@@ -47,23 +47,35 @@ window.MathJax = {
 
 //// Voice Speech test ////
 // TODO: Change the speech text to VoiPi
-const text_test = "Ceci n'est pas un Speech Synthesis!";
-const onenter = new SpeechSynthesisUtterance(
-  "activer le lecteur"
-);
-const utterance = new SpeechSynthesisUtterance(text_test);
-console.log(utterance.langs);
-utterance.lang = "fr-FR";
-onenter.lag = "fr-FR";
-
 // TODO: Activation button
-document.getElementById("read").innerHTML = "Active auto reader";
+document.getElementById("read").innerHTML = translate["narrator"];
 document.getElementById("read").onclick = () => {
-  console.log("Works!");
-  speechSynthesis.speak(utterance);
+  var name_content = document.getElementById("solid-name").innerText;
+  var say_solid_name = new SpeechSynthesisUtterance(name_content);
+  say_solid_name.pitch = 1.2;
+  say_solid_name.rate = 1.15;
+  say_solid_name.lang = lang;
+
+  var solid_content = document.getElementById("solid-info").innerText;
+  var say_content = new SpeechSynthesisUtterance(solid_content);
+  say_content.pitch = 1.2;
+  say_content.rate = 1.15;
+  say_content.lang = lang;
+
+  console.log(`The narrator said: ${name_content}`);
+  speechSynthesis.speak(say_solid_name);
+  console.log(`The narrator said: ${solid_content}`);
+  speechSynthesis.speak(say_content);
 };
 document.getElementById("read").onmouseenter = () => {
-  console.log("Something goes read here...");
+  var onenter = new SpeechSynthesisUtterance(
+    translate["narrator"]
+  );
+  onenter.lang = lang;
+  onenter.rate = 1.15;
+  onenter.pitch = 1.2;
+
+  console.log(`The narrator said: ${translate["narrator"]}`);
   speechSynthesis.speak(onenter);
 };
 ////////////////////////////

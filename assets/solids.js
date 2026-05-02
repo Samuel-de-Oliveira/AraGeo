@@ -41,19 +41,19 @@ export function renderCube(Solid) {
   return `
   <p id="definition">
     <b>${translate["definition"]}</b> Poliédro de 6 faces quadradas, onde
-    cada um dos seus vertices tem o mesmo tamanho e cada face
+    cada um dos seus vértices tem o mesmo tamanho e cada face
     a mesma área.
   </p>
 
   <ul>
-    <li><b>${translate["side_value"]}</b> ${Solid.side} <i>cm</i></li>
-    <li><b>${translate["volume_formula"]}</b> \\( l^{3} \\)</li>
-    <li><b>${translate["area_formula"]}</b> \\( 6l^{2} \\)</li>
-    <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³</i></li>
-    <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i></li>
-    <li><b>${translate["faces"]}</b> 6</li>
-    <li><b>${translate["edges"]}</b> 12</li>
-    <li><b>${translate["vertex"]}</b> 8</li>
+    <li><b>${translate["side_value"]}</b> ${Solid.side} <i>cm</i>;</li>
+    <li><b>${translate["volume_formula"]}</b> \\( l^{3} \\);</li>
+    <li><b>${translate["area_formula"]}</b> \\( 6l^{2} \\);</li>
+    <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³;</i></li>
+    <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i>;</li>
+    <li><b>${translate["faces"]}</b> 6;</li>
+    <li><b>${translate["edges"]}</b> 12;</li>
+    <li><b>${translate["vertex"]}</b> 8;</li>
     <li><b>${translate["platon"]}</b></li>
   </ul>
   `;
@@ -72,15 +72,15 @@ export function renderCylinder(Solid) {
   </p>
 
   <ul>
-    <li><b>Raio da Base:</b> ${Solid.radius} <i>cm</i></li>
-    <li><b>Altura do Cilindro:</b> ${Solid.height} <i>cm</i></li>
-    <li><b>${translate["formula_volume"]}</b> \\( \\pi r^{2} h \\)</li>
-    <li><b>${translate["area_formula"]}</b> \\( 2 \\pi r^{2} + 2 \\pi r h \\)</li>
-    <li><b>${translate["volume"]}</b> ${realVolume.toFixed(3)} <i>cm³</i></li>
-    <li><b>${translate["area"]}</b> ${realArea.toFixed(3)} <i>cm²</i></li>
-    <li><b>${translate["faces"]}</b> 3</li>
-    <li><b>${translate["edges"]}</b> 3</li>
-    <li><b>${translate["vertex"]}</b></li>
+    <li><b>Raio da Base:</b> ${Solid.radius} <i>cm</i>;</li>
+    <li><b>Altura do Cilindro:</b> ${Solid.height} <i>cm</i>;</li>
+    <li><b>${translate["formula_volume"]}</b> \\( \\pi r^{2} h \\);</li>
+    <li><b>${translate["area_formula"]}</b> \\( 2 \\pi r^{2} + 2 \\pi r h \\);</li>
+    <li><b>${translate["volume"]}</b> ${realVolume.toFixed(3)} <i>cm³</i>;</li>
+    <li><b>${translate["area"]}</b> ${realArea.toFixed(3)} <i>cm²</i>;</li>
+    <li><b>${translate["faces"]}</b> 3;</li>
+    <li><b>${translate["edges"]}</b> 3;</li>
+    <li><b>${translate["vertex"]}</b>.</li>
   </ul>
   `;
 } 
@@ -91,7 +91,7 @@ export function renderRegularTetrahedron(Solid) {
 
   return `
   <ul>
-    <li><b>${translate["side_value"]}</b> ${Solid.side}</li>
+    <li><b>${translate["side_value"]}</b> ${Solid.side};</li>
     <li><b>${translate["platon"]}</b></li>
   </ul>
   `;
@@ -101,14 +101,14 @@ export function renderRegularDodecahedron(Solid) {
   return `
   <p id="definition">
     <b>${translate["definition"]}</b> Poliédro de 12 faces onde cada
-    face é um pentagono regular.
+    face é um pentágono regular.
   </p>
 
   <ul>
-    <li><b>${translate["side_value"]}</b> ${Solid.side} <i>cm</i></li>
-    <li><b>${translate["faces"]}</b> 12</li>
-    <li><b>${translate["edges"]}</b> 30</li>
-    <li><b>${translate["vertex"]}</b> 20</li>
+    <li><b>${translate["side_value"]}</b> ${Solid.side} <i>cm</i>;</li>
+    <li><b>${translate["faces"]}</b> 12;</li>
+    <li><b>${translate["edges"]}</b> 30;</li>
+    <li><b>${translate["vertex"]}</b> 20;</li>
     <li><b>${translate["platon"]}</b></li>
   <ul>
   `;
@@ -126,12 +126,12 @@ export function renderSphere(Solid) {
        de um certo raio.
      </p>
 
-     <li><b>Raio real da esfera:</b> ${Solid.radius} <i>cm</i></li>
-     <li><b>${translate["volume_formula"]}</b> \\( 4/3 \\cdot \\pi r^{3} \\)</li>
-     <li><b>${translate["area_formula"]}</b> \\( 4 \\pi r^{2} \\)</li>
-     <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³</i></li>
-     <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i></li>
-     <li><b>Não possui face, aresta e nem vertice.</b></li>
+     <li><b>Raio real da esfera:</b> ${Solid.radius} <i>cm</i>;</li>
+     <li><b>${translate["volume_formula"]}</b> \\( 4/3 \\cdot \\pi r^{3} \\);</li>
+     <li><b>${translate["area_formula"]}</b> \\( 4 \\pi r^{2} \\);</li>
+     <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³</i>;</li>
+     <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i>;</li>
+     <li><b>Não possui face, aresta e nem vertice</b>;</li>
      <li><b>Mas se considera que tenha uma surperficie curva.</b></li>
    </ul>
   `;

@@ -20,8 +20,9 @@ export const EN = {
   faces: "Number of faces:",
   edges: "Number of edges:",
   vertex: "Number of vertices:",
-  platon: "It's a Platon's solid.",
+  platon: "I am a Platon's solid.",
   definition: "<b>Defition:</b>",
+  narrator: "Activate narrator",
 };
 
 // Français
@@ -37,8 +38,9 @@ export const FR = {
   faces: "Nombre de faces:",
   edges: "Nombre de arêtes:",
   vertex: "Nombre de sommet:",
-  platon: "C'est un solide de Platon.",
+  platon: "Je suis un solide de Platon.",
   definition: "<b>Defition:</b>",
+  narrator: "Activer narrador",
 };
 
 // Português Brasil
@@ -54,8 +56,9 @@ export const PT_BR = {
   edges: "Número de arestas:",
   vertex: "Número de vertices:",
   side_value: "O lado deste sólido mede:",
-  platon: "É um sólido de Platão",
+  platon: "Eu sou um sólido de Platão",
   definition: "<b>Definição:</b>",
+  narrator: "Ativar narrador",
 };
 
 // Solids English
@@ -64,7 +67,7 @@ export const SOLIDS_EN = {
   Cylinder: "Cylinder",
   Sphere: "Sphere",
   RegularTetrehedron: "Regular Tetrahedron",
-  RegularDodocahedron: "Regular Dodecahedron",
+  RegularDodecahedron: "Regular Dodecahedron",
 };
 
 // Solides Français
@@ -73,7 +76,7 @@ export const SOLIDS_FR = {
   Cylinder: "Cylinder",
   Sphere: "Sphère",
   RegularTetrehedron: "Tétraèdre Régulier",
-  RegularDodocahedron: "Dodécaèdre Régulier",
+  RegularDodecahedron: "Dodécaèdre Régulier",
 };
 
 // Solidos Português Brasil
@@ -82,5 +85,5 @@ export const SOLIDS_PT_BR = {
   Cylinder: "Cilindro",
   Sphere: "Esfera",
   RegularTetrehedron: "Tetraedro Regular",
-  RegularDodocahedron: "Dodecaedro Regular",
+  RegularDodecahedron: "Dodecaedro Regular",
 };
