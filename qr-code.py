@@ -1,11 +1,10 @@
-# QR Code Generator!!! 
+# QR Code Generator!
 # USAGE: python qr-code.py "[Link of the solid]" [Image name]
 
 import qrcode
 import sys
 import os
 
-# Get args
 args: list = sys.argv[1:]
 print(args)
 
@@ -30,6 +29,4 @@ if __name__ == "__main__":
 
     # Create QR Code directory
     os.system("mkdir -p qr-codes")
-
-    # Save
     img.save(f"qr-codes/{args[1]}.png")

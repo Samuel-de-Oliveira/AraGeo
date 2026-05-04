@@ -37,10 +37,17 @@ if (["en", "en-us"].includes(lang.toLowerCase())) {
 window.MathJax = {
   options: {
     enableSpeech: true,
+    enableMenu: true,
     renderActions: {
-      assistiveMml: []
-    }
-  }
+      assistiveMml: [],
+    },
+  },
+  loader: {
+    load: ['[a11y]/semantic-enrich'],
+  },
+  a11y: {
+    speech: true,
+  },
 };
 /////////////////////////////////////
 
