@@ -49,8 +49,8 @@ export function renderCube(Solid) {
     <li><b>${translate["side_value"]}</b> ${Solid.side} <i>cm</i>;</li>
     <li><b>${translate["volume_formula"]}</b> \\( l^{3} \\);</li>
     <li><b>${translate["area_formula"]}</b> \\( 6l^{2} \\);</li>
-    <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³;</i></li>
-    <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i>;</li>
+    <li><b>${translate["volume"]}</b> ${realVolume.toFixed(3)} <i>cm³;</i></li>
+    <li><b>${translate["area"]}</b> ${realArea.toFixed(3)} <i>cm²</i>;</li>
     <li><b>${translate["faces"]}</b> 6;</li>
     <li><b>${translate["edges"]}</b> 12;</li>
     <li><b>${translate["vertex"]}</b> 8;</li>
@@ -115,8 +115,8 @@ export function renderRegularDodecahedron(Solid) {
 }
 
 export function renderSphere(Solid) {
-  const realVolume = 4/3 * Math.pi * (Number(Solid.radius) ** 3);
-  const realArea = 4 * Math.pi * (Number(Solid.radius) ** 2);
+  const realVolume = 4/3 * Math.PI * (Number(Solid.radius) ** 3);
+  const realArea = 4 * Math.PI * (Number(Solid.radius) ** 2);
 
   return `
    <ul>
@@ -129,8 +129,8 @@ export function renderSphere(Solid) {
      <li><b>Raio real da esfera:</b> ${Solid.radius} <i>cm</i>;</li>
      <li><b>${translate["volume_formula"]}</b> \\( 4/3 \\cdot \\pi r^{3} \\);</li>
      <li><b>${translate["area_formula"]}</b> \\( 4 \\pi r^{2} \\);</li>
-     <li><b>${translate["volume"]}</b> ${realVolume} <i>cm³</i>;</li>
-     <li><b>${translate["area"]}</b> ${realArea} <i>cm²</i>;</li>
+     <li><b>${translate["volume"]}</b> ${realVolume.toFixed(3)} <i>cm³</i>;</li>
+     <li><b>${translate["area"]}</b> ${realArea.toFixed(3)} <i>cm²</i>;</li>
      <li><b>Não possui face, aresta e nem vertice</b>;</li>
      <li><b>Mas se considera que tenha uma surperficie curva.</b></li>
    </ul>

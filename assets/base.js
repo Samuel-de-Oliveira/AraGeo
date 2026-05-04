@@ -53,8 +53,6 @@ window.MathJax = {
 
 
 //// Voice Speech test ////
-// TODO: Change the speech text to VoiPi
-// TODO: Activation button
 document.getElementById("read").innerHTML = translate["narrator"];
 document.getElementById("read").onclick = () => {
   var name_content = document.getElementById("solid-name").innerText;
