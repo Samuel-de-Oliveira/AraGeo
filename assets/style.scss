@@ -23,6 +23,7 @@ header {
     background: var(--UI-black);
     transition-duration: var(--Transition);
   } #read:hover {
+    border-radius: 15px;
     color: var(--UI-black);
     background: var(--UI-White);
     transition-duration: var(--Transition);
@@ -47,6 +48,12 @@ main {
   padding-top: 10px;
   font-size: 16pt;
 	background: var(--UI-White);
+
+  ul {
+    li {
+      padding-bottom: 3px;
+    }
+  }
 }
 
 #definition {
@@ -58,6 +65,7 @@ footer {
   sub {
     color: white;
   }
+
   a {
     color: white;
     text-decoration: none;
@@ -80,9 +88,16 @@ footer {
     font-size: 14pt;
     padding: 22px;
     padding-top: 8px;
+
+    ul {
+      li {
+        padding-bottom: 0;
+      }
+    }
   }
 
   #definition {
     font-size: 15px;
+    padding: 0;
   }
 }

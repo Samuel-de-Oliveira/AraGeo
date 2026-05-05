@@ -5,12 +5,12 @@
 
 // TODO: Add the translations... DUHH??!!
 
-import * as tools from "./tools.js"
+import * as info from "./information.js";
 
 // English
 export const EN = {
   solid_name: "Hello, my name is",
-  credit: `Created by: <a href="${tools.MAIN_PAGE}">Samuel-de-Oliveira</a>`,
+  credit: `Created by: <a href="${info.MAIN_PAGE}">Samuel-de-Oliveira</a>`,
   version: "Base version:",
   side_value: "The side of this solid has:",
   volume_formula: "Volume's formula:",
@@ -28,7 +28,7 @@ export const EN = {
 // Français
 export const FR = {
   solid_name: "Salut, je m'appele", 
-  credit: `Creé par: <a href="${tools.MAIN_PAGE}">Samuel-de-Oliveirai</a>`,
+  credit: `Creé par: <a href="${info.MAIN_PAGE}">Samuel-de-Oliveirai</a>`,
   version: "Version de la base:",
   side_value: "Le côté de ce solide vaut:",
   volume_formula: "Formule du volume:",
@@ -46,10 +46,10 @@ export const FR = {
 // Português Brasil
 export const PT_BR = {
   solid_name: "Olá, meu nome é",
-  credit: `Criado por: <a href="${tools.MAIN_PAGE}">Samuel-de-Oliveira</a>`,
+  credit: `Criado por: <a href="${info.MAIN_PAGE}">Samuel-de-Oliveira</a>`,
   version: "Versão da base:",
-  volume_formula: "Formula do volume:",
-  area_formula: "Formula da área:",
+  volume_formula: "Fórmula do volume:",
+  area_formula: "Fórmula da área:",
   volume: "Volume real do sólido:",
   area: "Área real do sólido:",
   faces: "Número de faces:",
@@ -68,6 +68,7 @@ export const SOLIDS_EN = {
   Sphere: "Sphere",
   RegularTetrehedron: "Regular Tetrahedron",
   RegularDodecahedron: "Regular Dodecahedron",
+  Cobblestone: "Cobblestone",
 };
 
 // Solides Français
@@ -77,6 +78,7 @@ export const SOLIDS_FR = {
   Sphere: "Sphère",
   RegularTetrehedron: "Tétraèdre Régulier",
   RegularDodecahedron: "Dodécaèdre Régulier",
+  Cobblestone: "parallélépipède",
 };
 
 // Solidos Português Brasil
@@ -86,4 +88,28 @@ export const SOLIDS_PT_BR = {
   Sphere: "Esfera",
   RegularTetrehedron: "Tetraedro Regular",
   RegularDodecahedron: "Dodecaedro Regular",
+  Cobblestone: "paralelepípedo",
 };
+
+//// Language system ////
+export const lang = navigator.language;
+export var solid_translate = {};
+export var translate = {};
+
+if (["en", "en-us"].includes(lang.toLowerCase())) {
+  // English
+  solid_translate = SOLIDS_EN;
+  translate = EN;
+} else if (["fr", "fr-fr"].includes(lang.toLowerCase())) {
+  // Français
+  solid_translate = SOLIDS_FR;
+  translate = FR;
+} else if (["pt", "pt-br", "pt-pt"].includes(lang.toLowerCase())) {
+  // Português
+  solid_translate = SOLIDS_PT_BR;
+  translate = PT_BR;
+} else {
+  // In case of no translations avalible
+  solid_translate = SOLIDS_EN;
+  translate = EN;
+}

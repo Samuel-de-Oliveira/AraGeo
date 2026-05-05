@@ -7,31 +7,8 @@
 
 import * as solids from "./solids.js";
 import * as tools from "./tools.js";
+import * as info from "./information.js";
 import * as translation from "./translations.js";
-
-//// Language system ////
-const lang = navigator.language;
-var solid_translate = {};
-var translate = {};
-
-if (["en", "en-us"].includes(lang.toLowerCase())) {
-  // English
-  solid_translate = translation["SOLIDS_EN"];
-  translate = translation["EN"];
-} else if (["fr", "fr-fr"].includes(lang.toLowerCase())) {
-  // Français
-  solid_translate = translation["SOLIDS_FR"];
-  translate = translation["FR"];
-} else if (["pt", "pt-br", "pt-pt"].includes(lang.toLowerCase())) {
-  // Português
-  solid_translate = translation["SOLIDS_PT_BR"];
-  translate = translation["PT_BR"];
-} else {
-  // In case of no translations avalible
-  solid_translate = tranlation["SOLIDS_EN"];
-  translate = translation["EN"];
-}
-////////////////////////
 
 //// MathJax Acessibility Config ////
 window.MathJax = {
@@ -53,19 +30,19 @@ window.MathJax = {
 
 
 //// Voice Speech test ////
-document.getElementById("read").innerHTML = translate["narrator"];
+document.getElementById("read").innerHTML = translation.translate["narrator"];
 document.getElementById("read").onclick = () => {
   var name_content = document.getElementById("solid-name").innerText;
   var say_solid_name = new SpeechSynthesisUtterance(name_content);
   say_solid_name.pitch = 1.2;
   say_solid_name.rate = 1.15;
-  say_solid_name.lang = lang;
+  say_solid_name.lang = translation.lang;
 
   var solid_content = document.getElementById("solid-info").innerText;
   var say_content = new SpeechSynthesisUtterance(solid_content);
   say_content.pitch = 1.2;
   say_content.rate = 1.15;
-  say_content.lang = lang;
+  say_content.lang = translation.lang;
 
   console.log(`The narrator said: ${name_content}`);
   speechSynthesis.speak(say_solid_name);
@@ -74,13 +51,13 @@ document.getElementById("read").onclick = () => {
 };
 document.getElementById("read").onmouseenter = () => {
   var onenter = new SpeechSynthesisUtterance(
-    translate["narrator"]
+    translation.translate["narrator"]
   );
-  onenter.lang = lang;
+  onenter.lang = translation.lang;
   onenter.rate = 1.15;
   onenter.pitch = 1.2;
 
-  console.log(`The narrator said: ${translate["narrator"]}`);
+  console.log(`The narrator said: ${translation.translate["narrator"]}`);
   speechSynthesis.speak(onenter);
 };
 ////////////////////////////
@@ -88,9 +65,9 @@ document.getElementById("read").onmouseenter = () => {
 
 // Version formater
 document.getElementById("version").innerHTML = `
-  ${translate["version"]} ${tools.ARAGEO_VERSION}
+  ${translation.translate["version"]} ${info.ARAGEO_VERSION}
 `;
-document.getElementById("credit").innerHTML = translate["credit"];
+document.getElementById("credit").innerHTML = translation.translate["credit"];
 
 // Get polyhedron info
 const params = new URLSearchParams(window.location.search);
@@ -101,7 +78,8 @@ console.log(solidObject); // Verify polyhedron Parameters
 // Title set
 if (solidObject.solid) {
   document.getElementById("solid-name").innerHTML = `
-    ${translate["solid_name"]} ${solid_translate[solidObject.solid]}
+    ${translation.translate["solid_name"]} 
+    ${translation.solid_translate[solidObject.solid]}
   `;
 } else {
   document.getElementById("solid-name").innerHTML = "ERROR: Você esqueceu meu nome!!!";

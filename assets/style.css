@@ -21,6 +21,7 @@ header #read {
   transition-duration: var(--Transition);
 }
 header #read:hover {
+  border-radius: 15px;
   color: var(--UI-black);
   background: var(--UI-White);
   transition-duration: var(--Transition);
@@ -46,6 +47,9 @@ main {
   padding-top: 10px;
   font-size: 16pt;
   background: var(--UI-White);
+}
+main ul li {
+  padding-bottom: 3px;
 }
 
 #definition {
@@ -79,8 +83,12 @@ footer {
     padding: 22px;
     padding-top: 8px;
   }
+  main ul li {
+    padding-bottom: 0;
+  }
   #definition {
     font-size: 15px;
+    padding: 0;
   }
 }
 
