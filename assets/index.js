@@ -4,6 +4,8 @@
  *
  */
 
+// TODO: Add translation
+
 import * as tools from "./tools.js";
 import * as info from "./information.js";
 
@@ -12,5 +14,7 @@ document.getElementById("version").innerHTML = `
 `;
 
 document.getElementById("credit").innerHTML = `
-  Criado por: <a href="${info.MAIN_PAGE}">Samuel-de-Oliveira</a>
+  Criado por: <a href="${info.MAIN_PAGE}">Samuel-de-Oliveira</a><br>
 `;
+
+// TODO: Add email for contact
