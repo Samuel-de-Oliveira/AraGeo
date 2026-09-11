@@ -6,7 +6,9 @@ import sys
 import os
 
 args: list = sys.argv[1:]
-print(args)
+if not args:
+    print('No arguments')
+    sys.exit()
 
 if __name__ == "__main__":
     # Start QR Code
@@ -28,5 +30,5 @@ if __name__ == "__main__":
     )
 
     # Create QR Code directory
-    os.system("mkdir -p qr-codes")
+    os.makedirs("qr-codes", exist_ok=True)
     img.save(f"qr-codes/{args[1]}.png")

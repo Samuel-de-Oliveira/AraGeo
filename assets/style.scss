@@ -2,7 +2,7 @@
 
 :root {
   --UI-black: #131313;
-  --UI-White: #DADADA;
+  --UI-white: #DADADA;
   --Transition:  0.2s;
 }
  
@@ -19,16 +19,16 @@ header {
     font-size: 18pt;
     border-radius: 10px;
 
-    color: var(--UI-White);
+    color: var(--UI-white);
     background: var(--UI-black);
     transition-duration: var(--Transition);
   } #read:hover {
     border-radius: 15px;
     color: var(--UI-black);
-    background: var(--UI-White);
+    background: var(--UI-white);
     transition-duration: var(--Transition);
   } #read:active {
-    color: var(--UI-White);
+    color: var(--UI-white);
     background: var(--UI-black);
     transition-duration: var(--Transition);
   }
@@ -47,7 +47,7 @@ main {
   padding: 35px;
   padding-top: 10px;
   font-size: 16pt;
-	background: var(--UI-White);
+	background: var(--UI-white);
 
   ul {
     li {

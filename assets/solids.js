@@ -14,9 +14,7 @@ export function renderCube(Solid) {
 
   return `
   <p id="definition">
-    <b>${translation.translate["definition"]}</b> Poliédro de 6 faces quadradas, onde
-    cada um dos seus vértices tem o mesmo tamanho e cada face
-    a mesma área.
+    <b>${translation.translate["definition"]}</b> Poliedro regular composto por seis faces quadradas congruentes.
   </p>
 
   <ul>
@@ -41,8 +39,7 @@ export function renderCylinder(Solid) {
 
   return `
   <p id="definition">
-    <b>${translation.translate["definition"]}</b> Poliédro de tipo prisma que possui
-    uma base que é circular.
+    <b>${translation.translate["definition"]}</b> O cilindro é um sólido geométrico limitado por duas bases circulares congruentes e paralelas, conectadas por uma superfície lateral curva.
   </p>
 
   <ul>
@@ -59,9 +56,11 @@ export function renderCylinder(Solid) {
   `;
 } 
 
-// TODO: Tetrahedron
+// TODO: Tetrahedron, add formula
 export function renderRegularTetrahedron(Solid) {
+  // Real formula of volume: a^3/6sqrt(2)
   const realVolume = Number(Solid.side) * 2;
+
 
   return `
   <ul>
@@ -94,9 +93,7 @@ export function renderSphere(Solid) {
 
   return `
    <p id="definition">
-       <b>${translation.translate["definition"]}</b> É um poliedro liso, tal que existe um conjunto
-       de todos os pontos do espaço que estão fixos pela mesma distância
-       de um certo raio.
+       <b>${translation.translate["definition"]}</b> Uma esfera é o conjunto dos pontos do espaço que estão à mesma distância de um ponto fixo chamado centro..
    </p>
 
    <ul>
@@ -111,11 +108,11 @@ export function renderSphere(Solid) {
   `;
 }
 
-// TODO: Cobblestone
-export function renderCoblestone(Solid) {
+// TODO: Cobblestone, finish it
+export function renderCobblestone(Solid) {
   return `
     <p>
-      <b>${translation.translate["definition"]}</b>
+      <b>${translation.translate["definition"]}</b> Not finished
     </p> 
 
     <ul>

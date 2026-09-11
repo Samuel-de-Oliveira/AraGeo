@@ -21,10 +21,11 @@ export const EN = {
   edges: "Number of edges:",
   vertex: "Number of vertices:",
   platon: "I am a Platon's solid.",
-  definition: "<b>Defition:</b>",
+  definition: "<b>Definition:</b>",
   narrator: "Activate narrator",
 };
 
+// TODO: Fix grammar of some french phrases
 // Français
 export const FR = {
   solid_name: "Salut, je m'appele", 
@@ -39,7 +40,7 @@ export const FR = {
   edges: "Nombre de arêtes:",
   vertex: "Nombre de sommet:",
   platon: "Je suis un solide de Platon.",
-  definition: "<b>Defition:</b>",
+  definition: "<b>Definition:</b>",
   narrator: "Activer narrador",
 };
 
