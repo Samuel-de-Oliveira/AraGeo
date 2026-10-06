@@ -3,7 +3,7 @@
  *  Translation file
  */
 
-// TODO: Add the translations... DUHH??!!
+// TODO: Add the translations for the solids definitions
 
 import * as info from "./information.js";
 
@@ -67,7 +67,7 @@ export const SOLIDS_EN = {
   Cube: "Cube",
   Cylinder: "Cylinder",
   Sphere: "Sphere",
-  RegularTetrehedron: "Regular Tetrahedron",
+  RegularTetrahedron: "Regular Tetrahedron",
   RegularDodecahedron: "Regular Dodecahedron",
   Cobblestone: "Cobblestone",
 };
@@ -77,7 +77,7 @@ export const SOLIDS_FR = {
   Cube: "Cube",
   Cylinder: "Cylinder",
   Sphere: "Sphère",
-  RegularTetrehedron: "Tétraèdre Régulier",
+  RegularTetrahedron: "Tétraèdre Régulier",
   RegularDodecahedron: "Dodécaèdre Régulier",
   Cobblestone: "parallélépipède",
 };
@@ -87,12 +87,13 @@ export const SOLIDS_PT_BR = {
   Cube: "Cubo",
   Cylinder: "Cilindro",
   Sphere: "Esfera",
-  RegularTetrehedron: "Tetraedro Regular",
+  RegularTetrahedron: "Tetraedro Regular",
   RegularDodecahedron: "Dodecaedro Regular",
   Cobblestone: "paralelepípedo",
 };
 
 //// Language system ////
+// Define variables
 export const lang = navigator.language;
 export var solid_translate = {};
 export var translate = {};

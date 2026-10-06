@@ -37,6 +37,7 @@ export function renderCylinder(Solid) {
   const realVolume = baseArea * Number(Solid.height);
   const realArea = 2 * baseArea + sideArea;
 
+  // TODO: Add translation for Radius and height of cylinder
   return `
   <p id="definition">
     <b>${translation.translate["definition"]}</b> O cilindro é um sólido geométrico limitado por duas bases circulares congruentes e paralelas, conectadas por uma superfície lateral curva.
@@ -58,14 +59,20 @@ export function renderCylinder(Solid) {
 
 // TODO: Tetrahedron, add formula
 export function renderRegularTetrahedron(Solid) {
-  // Real formula of volume: a^3/6sqrt(2)
-  const realVolume = Number(Solid.side) * 2;
+  const realVolume = (Number(Solid.side) ** 3 * Math.sqrt(2)) / 12;
+  const aSideArea  = (Number(Solid.side) ** 2 * Math.sqrt(3)) / 4;
+  const realArea   = Number(aSideArea) * 4;
 
 
   return `
   <ul>
     <li><b>${translation.translate["side_value"]}</b> ${Solid.side.replace(/\./g, ",")};</li>
-    <li><b>${translation.translate["platon"]}</b></li>
+    <li><b>${translation.translate["volume"]}</b> ${realVolume.toFixed(2).replace(/\./g, ",")};</li>
+    <li><b>${translation.translate["area"]}</b> ${realArea.toFixed(2).replace(/\./g, ",")};</li>
+    <li><b>${translation.translate["faces"]}</b> 4;</li>
+    <li><b>${translation.translate["edges"]}</b> 6;</li>
+    <li><b>${translation.translate["vertex"]}</b> 4;</li>
+    <li><b>${translation.translate["platon"]}</b>.</li>
   </ul>
   `;
 }
@@ -82,7 +89,7 @@ export function renderRegularDodecahedron(Solid) {
     <li><b>${translation.translate["faces"]}</b> 12;</li>
     <li><b>${translation.translate["edges"]}</b> 30;</li>
     <li><b>${translation.translate["vertex"]}</b> 20;</li>
-    <li><b>${translation.translate["platon"]}</b></li>
+    <li><b>${translation.translate["platon"]}</b>.</li>
   <ul>
   `;
 }
@@ -116,6 +123,7 @@ export function renderCobblestone(Solid) {
     </p> 
 
     <ul>
+      <li></li>
     </ul>
   `;
 }

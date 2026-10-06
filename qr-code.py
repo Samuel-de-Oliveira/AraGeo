@@ -7,7 +7,10 @@ import os
 
 args: list = sys.argv[1:]
 if not args:
-    print('No arguments')
+    print(
+        "No arguments...",
+        '\n\033[33;1mUSAGE:\033[m python qr-code.py "[Link of the solid]" [Image name]',
+    )
     sys.exit()
 
 if __name__ == "__main__":
