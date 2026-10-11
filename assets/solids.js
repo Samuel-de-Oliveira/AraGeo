@@ -31,6 +31,7 @@ export function renderCube(Solid) {
   `;
 }
 
+
 export function renderCylinder(Solid) {
   const baseArea = (Number(Solid.radius) ** 2) * Math.PI;
   const sideArea = Number(Solid.radius) * 2 * Math.PI * Number(Solid.height); 
@@ -57,18 +58,19 @@ export function renderCylinder(Solid) {
   `;
 } 
 
-// TODO: Tetrahedron, add formula
+
 export function renderRegularTetrahedron(Solid) {
   const realVolume = (Number(Solid.side) ** 3 * Math.sqrt(2)) / 12;
   const aSideArea  = (Number(Solid.side) ** 2 * Math.sqrt(3)) / 4;
   const realArea   = Number(aSideArea) * 4;
 
-
   return `
   <ul>
-    <li><b>${translation.translate["side_value"]}</b> ${Solid.side.replace(/\./g, ",")};</li>
-    <li><b>${translation.translate["volume"]}</b> ${realVolume.toFixed(2).replace(/\./g, ",")};</li>
-    <li><b>${translation.translate["area"]}</b> ${realArea.toFixed(2).replace(/\./g, ",")};</li>
+    <li><b>${translation.translate["side_value"]}</b> ${Solid.side.replace(/\./g, ",")} <i>cm</i>;</li>
+    <li><b>${translation.translate["volume_formula"]}</b> \\( \\frac{l^{3} \\sqrt{2}}{12} \\);</li>
+    <li><b>${translation.translate["area_formula"]}</b> \\( \\frac{l^{2} \\sqrt{3}}{4} \\);</li>
+    <li><b>${translation.translate["volume"]}</b> ${realVolume.toFixed(2).replace(/\./g, ",")} <i>cm³</i>;</li>
+    <li><b>${translation.translate["area"]}</b> ${realArea.toFixed(2).replace(/\./g, ",")} <i>cm²</i>;</li>
     <li><b>${translation.translate["faces"]}</b> 4;</li>
     <li><b>${translation.translate["edges"]}</b> 6;</li>
     <li><b>${translation.translate["vertex"]}</b> 4;</li>
@@ -76,6 +78,7 @@ export function renderRegularTetrahedron(Solid) {
   </ul>
   `;
 }
+
 
 export function renderRegularDodecahedron(Solid) {
   return `
@@ -117,9 +120,11 @@ export function renderSphere(Solid) {
 
 // TODO: Cobblestone, finish it
 export function renderCobblestone(Solid) {
+  const realVolume = Solid.sideA * Solid.sideB * Solid.sideC;
+
   return `
     <p>
-      <b>${translation.translate["definition"]}</b> Not finished
+      <b>${translation.translate["definition"]}</b> Not finished.
     </p> 
 
     <ul>
