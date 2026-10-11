@@ -65,6 +65,10 @@ export function renderRegularTetrahedron(Solid) {
   const realArea   = Number(aSideArea) * 4;
 
   return `
+  <p id="definition">
+    <b>${translation.translate["definition"]}</b> Poliedro regular composto por 4 faces de forma de um triangulo equilátero.
+  </p>
+
   <ul>
     <li><b>${translation.translate["side_value"]}</b> ${Solid.side.replace(/\./g, ",")} <i>cm</i>;</li>
     <li><b>${translation.translate["volume_formula"]}</b> \\( \\frac{l^{3} \\sqrt{2}}{12} \\);</li>
