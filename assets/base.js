@@ -85,8 +85,10 @@ if (solidObject.solid) {
   document.getElementById("solid-name").innerHTML = "ERROR: Você esqueceu meu nome!!!";
 }
 
+const solids_keys = Object.keys(tools.SYSTEM_DATA.solids); // Get solids list
+
 // Polyhedron Information
-if (solidObject.solid) {
+if (solidObject && solids_keys.includes(solidObject.solid)) {
   // Show polyhedron info
   try {
     document.getElementById("solid-info").innerHTML = solids[
