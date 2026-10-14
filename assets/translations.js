@@ -23,6 +23,7 @@ export const EN = {
   platon: "I am a Platon's solid.",
   definition: "<b>Definition:</b>",
   narrator: "Activate narrator",
+  error_solid: "the system doesn't have enought information about the solid!!!",
 };
 
 // TODO: Fix grammar of some french phrases
@@ -42,6 +43,7 @@ export const FR = {
   platon: "Je suis un solide de Platon.",
   definition: "<b>Definition:</b>",
   narrator: "Activer narrador",
+  error_solid: "Le système n'avoir pas d'informations suffisantes sur le solide!!!"
 };
 
 // Português Brasil
@@ -55,11 +57,12 @@ export const PT_BR = {
   area: "Área real do sólido:",
   faces: "Número de faces:",
   edges: "Número de arestas:",
-  vertex: "Número de vertices:",
+  vertex: "Número de vértices:",
   side_value: "O lado deste sólido mede:",
   platon: "Eu sou um sólido de Platão",
   definition: "<b>Definição:</b>",
   narrator: "Ativar narrador",
+  error_solid: "O sistema não possui informações suficiente sobre o sólido!!!",
 };
 
 // Solids English

@@ -95,17 +95,16 @@ if (solidObject && solids_keys.includes(solidObject.solid)) {
       tools.SYSTEM_DATA.solids[solidObject.solid]
     ](solidObject);
   } catch(Err) {
-    // TODO: Add translations for error systems
+    // Error treatment for the system
     document.getElementById("solid-info").innerHTML = `
-      <b>Estamos sem informações suficientes sobre o sólido!!!</b><br>
+      <b>${translation.translate["error_solid"]}</b><br>
       <b>ERROR: ${Err.name}!!!</b>
     `;
   }
 } else {
-  // TODO: Add translations for error systems
   // In case theres is no Seach Params
   document.getElementById("solid-info").innerHTML = `
-    <b>Estamos sem informações suficientes sobre o sólido!!!</b><br>
+    <b>${translation.translate["error_solid"]}</b><br>
     <b>ERROR: O sistema de Seach Parameters está sem parametros!!!</b>
   `;
 }
