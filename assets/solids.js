@@ -122,10 +122,14 @@ export function renderSphere(Solid) {
   `;
 }
 
-// TODO: Cobblestone, finish it
 export function renderCobblestone(Solid) {
   const realVolume = Solid.sideA * Solid.sideB * Solid.sideC;
+  const faceA = Solid.sideA * Solid.sideB;
+  const faceB = Solid.sideB * Solid.sideC;
+  const faceC = Solid.sideC * Solid.sideA;
+  const realArea = 2 * faceA + 2 * faceB + 2 * faceC;
 
+  // Add translations and informations about the cobblestone
   return `
     <p>
       <b>${translation.translate["definition"]}</b> Not finished.
