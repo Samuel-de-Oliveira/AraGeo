@@ -95,11 +95,22 @@ export const SOLIDS_PT_BR = {
   Cobblestone: "paralelepípedo",
 };
 
+// TODO:
+// Definitions
+DEF_EN = {};
+
+DEF_FR = {};
+
+DEF_PT_BR = {};
+//////////////
+
+
 //// Language system ////
 // Define variables
 export const lang = navigator.language;
 export var solid_translate = {};
 export var translate = {};
+export var definitions = {}; // TODO: Add transaltions for solid definitions
 
 if (["en", "en-us"].includes(lang.toLowerCase())) {
   // English

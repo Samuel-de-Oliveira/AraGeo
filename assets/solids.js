@@ -136,7 +136,8 @@ export function renderCobblestone(Solid) {
     </p> 
 
     <ul>
-      <li></li>
+      <li><b>${translation.translate["volume"]}</b> ${realVolume.toFixed(3)} <i>cm³</i>;</li>
+      <li><b>${translation.translate["area"]}</b> ${realArea.toFixed(3)} <i>cm²</i>;</li>
     </ul>
   `;
 }
