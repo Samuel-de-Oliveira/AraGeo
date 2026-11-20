@@ -92,16 +92,37 @@ export const SOLIDS_PT_BR = {
   Sphere: "Esfera",
   RegularTetrahedron: "Tetraedro Regular",
   RegularDodecahedron: "Dodecaedro Regular",
-  Cobblestone: "paralelepípedo",
+  Cobblestone: "Paralelepípedo",
 };
 
 // TODO:
 // Definitions
-DEF_EN = {};
+DEF_EN = {
+  Cube: "A regular polihedron with six congruent square faces.",
+  Cylinder: "",
+  Sphere: "",
+  RegularTetrahedron: "",
+  RegularDodecahedron: "",
+  Cobblestone: "",
+};
 
-DEF_FR = {};
+DEF_FR = {
+  Cube: "Um poliedro regular composto por seis faces quadradas congruentes.",
+  Cylinder: "",
+  Sphere: "",
+  RegularTetrahedron: "",
+  RegularDodecahedron: "",
+  Cobblestone: "",
+};
 
-DEF_PT_BR = {};
+DEF_PT_BR = {
+  Cube: "Un polyèdre régulier constitué de six faces carrées congruentes.",
+  Cylinder: "",
+  Sphere: "",
+  RegularTetrahedron: "",
+  RegularDodecahedron: "",
+  Cobblestone: "",
+};
 //////////////
 
 
